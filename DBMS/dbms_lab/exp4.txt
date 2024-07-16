@@ -1,0 +1,240 @@
+NAME: S SAMEEM
+ROLL NO: 57
+CLASS: S5R
+EXPERIMENT NO: 4
+DATE: 10/12/2021
+
+-----CREATION OF TABLE-----
+
+CREATE TABLE CUSTOMER1(cust_id number(4) not null primary key,cust_name varchar(10) not null,city varchar(11) not null,amount number(6) not null,discount number(3) not null,salesman_id varchar(12) not null);
+
+-----DESCRIPTION OF TABLE-----
+
+SQL> desc CUSTOMER1;
+ Name					Null?    	Type
+ ----------------------------------------- 	-------- 		----------------------------
+ CUST_ID				NOT NULL 	NUMBER(4)
+ CUST_NAME			NOT NULL 	VARCHAR2(10)
+ CITY					NOT NULL 	VARCHAR2(11)
+ AMOUNT 				NOT NULL 	NUMBER(6)
+ DISCOUNT				NOT NULL 	NUMBER(3)
+ SALESMAN_ID			NOT NULL 	VARCHAR2(12)
+
+-----INSERTION OF VALUES INTO TABLES-----
+
+INSERT INTO CUSTOMER1 VALUES(100,'Deepa','Trivandrum',1050,2,'K0010');
+INSERT INTO CUSTOMER1 VALUES(101,'Don','Trivandrum',8040,4,'K0010');
+INSERT INTO CUSTOMER1 VALUES(102,'Manacy','Kollam',20030,6,'A200tmp');
+INSERT INTO CUSTOMER1 VALUES(103,'Karthika','Ernakulam',8400,20,'EkmX1050');
+INSERT INTO CUSTOMER1 VALUES(104,'Tulasi','Ernakulam',2500,2,'EkmY2342');
+INSERT INTO CUSTOMER1 VALUES(105,'Roy','Trivandrum',2900,4,'L1045');
+INSERT INTO CUSTOMER1 VALUES(106,'Vivek','Trivandrum',3200,8,'L1045');
+INSERT INTO CUSTOMER1 VALUES(108,'Bhasi','Kottayam',12860,10,'KtmP1028');
+INSERT INTO CUSTOMER1 VALUES(109,'Anurag','Kottayam',3860,12,'KtmB158tmp');
+INSERT INTO CUSTOMER1 VALUES(110,'antony','Kottayam',9800,8,'KtmP1028');
+INSERT INTO CUSTOMER1 VALUES(111,'Meeran','Trichur',6700,6,'R3085');
+
+-----DISPLAY OF TABLES-----
+
+SQL> SELECT * FROM CUSTOMER1;
+
+CUST_ID 	CUST_NAME  CITY	      	AMOUNT   	DISCOUNT 	SALESMAN_ID
+---------- 	---------- 	----------- 	---------- 	---------- 	------------
+100 		Deepa      	Trivandrum	1050	      	2 		K0010
+101 		Don	      	Trivandrum	8040	      	4 		K0010
+102 		Manacy     	Kollam	20030	      	6 		A200tmp
+103 		Karthika   	Ernakulam 	8400	     	20 		EkmX1050
+104 		Tulasi     	Ernakulam 	2500	      	2 		EkmY2342
+105 		Roy	      	Trivandrum	2900	      	4 		L1045
+106 		Vivek     	Trivandrum	3200	      	8 		L1045
+108 		Bhasi      	Kottayam	12860	     	10 		KtmP1028
+109 		Anurag     	Kottayam	3860	     	12 		KtmB158tmp
+110 		antony     	Kottayam	9800	      	8 		KtmP1028
+111 		Meeran     	Trichur	6700	      	6 		R3085
+
+-----QUERIES-----
+
+1. Select all customers with a customer name starting with “a”.
+
+SQL> SELECT * FROM CUSTOMER1 WHERE SUBSTR(cust_name,1,1) in ('a');
+
+CUST_ID 	CUST_NAME  CITY	      	AMOUNT   	DISCOUNT 	SALESMAN_ID
+---------- 	---------- 	----------- 	---------- 	---------- 	------------
+110 		antony     	Kottayam	9800	      	8 		KtmP1028
+
+2. Select all customers with a customer name starting with “a” or “A”.
+
+SQL> SELECT * FROM CUSTOMER1 WHERE SUBSTR(cust_name,1,1) in ('a','A');
+CUST_ID 	CUST_NAME  CITY	      	AMOUNT   	DISCOUNT 	SALESMAN_ID
+---------- 	---------- 	----------- 	---------- 	---------- 	------------
+109 		Anurag     	Kottayam	3860	     	12 		KtmB158tmp
+110 		antony     	Kottayam	9800	      	8 		KtmP1028
+
+3. Modify customer names such that all customer names start with a capital letter.
+
+SQL> UPDATE CUSTOMER1 SET cust_name=CONCAT(UPPER(SUBSTR(cust_name,1,1)),SUBSTR(cust_name,2));
+
+11 rows updated.
+
+SQL> select * from CUSTOMER1;
+
+CUST_ID 	CUST_NAME  CITY	      	AMOUNT   	DISCOUNT 	SALESMAN_ID
+---------- 	---------- 	----------- 	---------- 	---------- 	------------
+100 		Deepa      	Trivandrum	1050	      	2 		K0010
+101 		Don	      	Trivandrum	8040	      	4 		K0010
+102 		Manacy     	Kollam	20030	      	6 		A200tmp
+103 		Karthika   	Ernakulam 	8400	     	20 		EkmX1050
+104 		Tulasi     	Ernakulam 	2500	      	2 		EkmY2342
+105 		Roy	      	Trivandrum	2900	      	4 		L1045
+106 		Vivek     	Trivandrum	3200	      	8 		L1045
+108 		Bhasi      	Kottayam	12860	     	10 		KtmP1028
+109 		Anurag     	Kottayam	3860	     	12 		KtmB158tmp
+110 		Antony     	Kottayam	9800	      	8 		KtmP1028
+111 		Meeran     	Trichur	6700	      	6 		R3085
+
+4. Find city values ending with “a”.
+
+SQL> SELECT city FROM CUSTOMER1 WHERE city LIKE '%a';
+
+no rows selected
+
+5. Return first 3 characters of salesman_ID.
+
+SQL> SELECT SUBSTR(salesman_id,1,3) AS salesman_id FROM CUSTOMER1;
+
+SALESMAN_ID
+------------
+K00
+K00
+A20
+Ekm
+Ekm
+L10
+L10
+Ktm
+Ktm
+Ktm
+R30
+
+11 rows selected.
+
+6. Find salesmanids with “tmp” in any position.
+
+SQL> SELECT salesman_id FROM CUSTOMER1 WHERE salesman_id like '%tmp%';
+
+SALESMAN_ID
+------------
+A200tmp
+KtmB158tmp
+
+7. Find count of city values that start with “T”.
+
+SQL> SELECT count(*) AS t_city FROM CUSTOMER1 WHERE SUBSTR(city,1,1) IN ('T');
+
+T_CITY
+----------
+5
+
+8. Select customer names starting with D and of atleast 4 characters.
+
+SQL> SELECT cust_name FROM CUSTOMER1 WHERE SUBSTR(cust_name,1,1) in ('D') AND LENGTH(cust_name)>=4;
+
+CUST_NAME
+----------
+Deepa
+
+9. Find city values that start with “K” and are at least 2 characters in length.
+
+SQL> SELECT DISTINCT(city) FROM CUSTOMER1 WHERE SUBSTR(city,1,1) in ('K') AND LENGTH(city)>=2;
+
+CITY
+-----------
+Kollam
+Kottayam
+
+10. Find city values that start with “K” and are at least 7 characters in length.
+
+SQL> SELECT DISTINCT(city) FROM CUSTOMER1 WHERE SUBSTR(city,1,1) in ('K') AND LENGTH(city)>=7;
+
+CITY
+-----------
+Kottayam
+
+11. Find city values that start with “K” and ends with “m”.
+
+SQL> SELECT DISTINCT(city) FROM CUSTOMER1 WHERE city LIKE 'K%m';
+
+CITY
+-----------
+Kottayam
+Kollam
+
+12. Display salesman details with salesman_ID,total amount given as discount and maximum discount provided by him in percentage with “%” symbol.
+
+SQL> SELECT salesman_id,SUM(discount/100*amount) AS tot_amt,CONCAT(MAX(discount),'%') AS max_dis FROM CUSTOMER1 GROUP BY salesman_id;
+
+SALESMAN_ID	TOT_AMT 	MAX_DIS
+---------------------- 	---------------	--------------
+A200tmp 	 	1201.8 	6%
+EkmX1050	   	1680 		20%
+KtmB158tmp	  	463.2 		12%
+R3085		    	402 		6%
+KtmP1028	   	2070 		10%
+K0010		  	342.6 		4%
+L1045		    	372 		8%
+EkmY2342	     	50 		2%
+
+13. Display city names in uppercase.
+
+SQL> SELECT UPPER(city) FROM CUSTOMER1;   
+
+UPPER(CITY)
+-----------
+TRIVANDRUM
+TRIVANDRUM
+KOLLAM
+ERNAKULAM
+ERNAKULAM
+TRIVANDRUM
+TRIVANDRUM
+KOTTAYAM
+KOTTAYAM
+KOTTAYAM
+TRICHUR
+
+14. Update salesman_ID of all salesman from Ernakulam by removing the prefix “Ekm”.
+
+SQL> UPDATE CUSTOMER1 SET salesman_id=SUBSTR(salesman_id,4) WHERE salesman_id LIKE'Ekm%';
+
+2 rows updated.
+
+SQL> SELECT * FROM CUSTOMER1;
+
+CUST_ID 	CUST_NAME  CITY	      	AMOUNT   	DISCOUNT 	SALESMAN_ID
+---------- 	---------- 	----------- 	---------- 	---------- 	------------
+100 		Deepa      	Trivandrum	1050	      	2 		K0010
+101 		Don	      	Trivandrum	8040	      	4 		K0010
+102 		Manacy     	Kollam	20030	      	6 		A200tmp
+103 		Karthika   	Ernakulam 	8400	     	20 		X1050
+104 		Tulasi     	Ernakulam 	2500	      	2 		Y2342
+105 		Roy	      	Trivandrum	2900	      	4 		L1045
+106 		Vivek     	Trivandrum	3200	      	8 		L1045
+108 		Bhasi      	Kottayam	12860	     	10 		KtmP1028
+109 		Anurag     	Kottayam	3860	     	12 		KtmB158tmp
+110 		antony     	Kottayam	9800	      	8 		KtmP1028
+111 		Meeran     	Trichur	6700	      	6 		R3085
+
+15. Display total sales amount of each salesperson till today with today’s date in dd-mm-yyyy.
+
+SQL> SELECT salesman_id,SUM(amount),TO_CHAR(current_date,'dd-mon-yyyy') AS today_date FROM CUSTOMER1 GROUP BY salesman_id;
+
+SALESMAN_ID  	SUM(AMOUNT) 	TODAY_DATE
+------------ 		----------- 		--------------------
+X1050		    	8400 			10-dec-2021
+A200tmp 	   	20030 			10-dec-2021
+Y2342		    	2500 			10-dec-2021
+KtmB158tmp	    	3860 			10-dec-2021
+R3085		    	6700 			10-dec-2021
+KtmP1028	   	22660 			10-dec-2021
+K0010		    	9090 			10-dec-2021
+L1045		    	6100 			10-dec-2021

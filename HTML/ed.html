@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Style for the dropdown container */
+    .dropdown-container {
+      position: relative;
+      display: inline-block;
+    }
+    
+    /* Style for the dropdown arrow */
+    .dropdown-arrow {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 5px 0 5px;
+      border-color: #000000 transparent transparent transparent;
+      pointer-events: none;
+    }
+    
+    /* Style for the dropdown */
+    .dropdown {
+      appearance: none;
+      -webkit-appearance: none;
+      padding: 10px;
+      border: none;
+      background-color: #f1f1f1;
+      color: #000;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="dropdown-container">
+    <select class="dropdown">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <div class="dropdown-arrow"></div>
+  </div>
+</body>
+</html>
+

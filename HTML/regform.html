@@ -1,0 +1,78 @@
+<html>
+    <head> 
+         <title>Registration Form </title>
+         <link rel="stylesheet" type="text/css" href="bt.css">
+    </head> 
+    <body id="bid" >
+        <center><h3>ENTRY FORM</h3></center> 
+            <form action="test.php" name=form1 method="POST" > 
+                <table name=tab cellspacing=10pt> 
+                    <tr>
+                        <td align=left>
+                            <h2>Enter your Name :</h2> 
+                        </td>
+                        <td align=left>
+                            <input type="text" name="t1" size=20>
+                        </td> 
+                    <tr>
+                        <td align=left>
+                            <h2>Enter your Age :</h2> 
+                        </td>
+                        <td align=left>
+                            <input type=text name=t2 maxlength=3 size=3> 
+                        </td>
+                    <tr>
+                        <td align=left>
+                            <h2>Enter your Address :</h2> 
+                        </td>
+                        <td align=left>
+                            <textarea name=ad rows=7 cols=25></textarea>
+                        </td> 
+                    <tr>
+                        <td align=left>
+                            <h2>Sex :</h2> 
+                        </td>
+                        <td align=left>
+                            <input type=radio name=r1 value="male" checked="true">Male<br> 
+                            <input type=radio name=r1 value="female">Female
+                        </td> 
+                    <tr>
+                        <td align=left>
+                            <h2>Nationality :</h2> 
+                        </td>
+                        <td align=left>
+                            <select name="country">   
+                                <option selected="" value="Default">India</option>      
+                                <option value="AL">Canada</option>   
+                                <option value="DZ">Australia</option>   
+                                <option value="AS">Russia</option>   
+                                <option value="AD">USA</option>   
+                            </select>
+                        </td> 
+                    <tr>
+                        <td align=left>
+                            <h2>Languages Known :</h2> 
+                        </td>
+                        <td align=left><center>(can select more than one)</center> 
+                            <input type=checkbox name=c1 value=c checked=true> C<br> 
+                            <input type=checkbox name=c2 value=c++> C++<br> 
+                            <input type=checkbox name=c3 value=vb> HTML<br> 
+                            <input type=checkbox name=c4 value=java> CSS<br> 
+                            <input type=checkbox name=c5 value=asp> JAVASCRIPT<br> 
+                            <input type=checkbox name=c6 value=others> OTHERS<br>
+                        </td>
+                    <tr>
+                        <td align=left>
+                            <h2>Enter your Password :</h2> 
+                        </td>
+                        <td align=left>
+                            <input type=password name=t3 size=18> 
+                        </td>
+                    </tr>
+                </table>
+                <center> 
+                    <input id="rs" type=reset value=" Reset " > 
+                    <input id="sb" type=submit value=" Submit " > 
+            </form> 
+    </body> 
+</html>

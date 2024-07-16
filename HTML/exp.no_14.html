@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Exam</title>
+        <link rel="stylesheet" type="text/css" href="exp.no_14.css">
+        <script language="javascript">
+            function exam(form)
+            {
+                var i=0;
+                if(form.one[2].checked)
+                    i=i+1;
+                if(form.two[3].checked)
+                    i=i+1;
+                if(form.three[0].checked)
+                    i=i+1;
+                if(form.four[1].checked)
+                    i=i+1;
+                window.alert("Thank You Taking Online Exam! Your Score is: "+i);
+                
+            }
+        </script>
+    </head>
+    <body bgcolor=darkcyan>
+        <form onSubmit="exam(this)" >
+            <center><h1 id="hed1"><blink>WELCOME TO ONLINE EXAM FORM</blink></h1></center>
+            <p>
+                <h2>1)Which is platform independent language</h2>
+                <input type="radio" name="one" value="c++">
+                <label>c++</label>
+                <input type="radio" name="one" value="c">
+                <label>c</label>
+                <input type="radio" name="one" value="java">
+                <label>java</label>
+                <input type="radio" name="one"value="basic">
+                <label>BASIC</label>
+            </p>
+            <p>
+                <h2>2) Which is class of all class in java</h2>
+                <input type="radio" name="two" value="system">
+                <label>System</label>
+                <input type="radio" name="two" value="math">
+                <label>Math</label>
+                <input type="radio" name="two" value="graphic">
+                <label>Graphic</label>
+                <input type="radio" name="two" value="object">
+                <label>Object</label> 
+            </p>
+            <p>
+                <h2>3)Frame package is in which package</h2>
+                <input type="radio" name="three" value="awt">
+                <label>AWT</label>
+                <input type="radio" name="three" value="applet">
+                <label>Applet</label>
+                <input type="radio" name="three" value="lang">
+                <label>Lang</label>
+                <input type="radio" name="three" value="swing">
+                <label>Swing</label>
+            </p>
+            <p>
+                <h2>4)Java does not support</h2>
+                <input type="radio" name="four" value="inheritance">
+                <label>Inheritance</label>
+                <input type="radio" name="four" value="multiple inheritance">
+                <label>Multilple inheritance</label>
+                <input type="radio" name="four" value="polymorphism">
+                <label>Polymorphism</label>
+                <input type="radio" name="four" value="encryption">
+                <label>Encryption</label>
+            </p>
+            <p>
+                <center>
+                    <button type="submit" value="submit" >Submit</button>
+                    <button type="reset"  value="reset" >Retest</button>
+                </center>
+            </p>
+        </form>
+    </body>
+</html>

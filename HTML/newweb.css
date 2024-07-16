@@ -1,0 +1,27 @@
+nav ul{
+    list-style-type: none;
+    background-color:rgb(7, 7, 7);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+nav li {
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .7cm;
+    line-height: 40px;
+    border-bottom: 1px solid #393434;
+}
+nav a {
+    text-decoration:none;
+    color: white;
+    display: block;
+    text-transform: uppercase;
+    padding: 4px;
+    font-weight: bold;
+    width: 120px;
+}
+nav a:hover  a:active {
+    background-color:rgb(17, 174, 236);
+}

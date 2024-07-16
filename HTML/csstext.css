@@ -1,0 +1,59 @@
+body { 
+    background-color: gray;
+}
+#style {
+    color: whitesmoke;
+    background-color:black;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid white;
+}
+h1 {
+    color: lightblue;
+    text-align: center;
+    text-transform: uppercase;
+}
+#textstyle {
+    color: royalblue;
+    text-indent: 25px;
+    text-align: justify;
+    font-size: larger;    
+}
+#fontstyle {
+    font-size: larger;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-indent: 25px;
+    text-align: justify;
+}
+
+#linkstyle {
+    text-align: justify;
+    text-indent: 25px;
+}
+a:link {
+    color: lightslategray;
+}
+a:hover {
+    color: red;
+}
+a:active {
+    color: blue;
+}
+a:visited {
+    color: mediumvioletred;
+}
+#ulstyle {
+    background-color: cornflowerblue;
+}
+#olstyle {
+    background-color: darkcyan;
+}
+ul,ol {
+    text-align: left;
+}
+li {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .7cm;
+    text-transform: uppercase;
+}

@@ -1,0 +1,31 @@
+.container {
+    color: whitesmoke;
+    background-color:black;
+    margin: 230px;
+    margin-bottom: 30px;
+    padding: 12px;
+    text-align: center;
+    border: 5px solid white;
+}
+#para {
+    background-color: dodgerblue;
+    color: white;
+    padding: 6px;
+    border: 5px solid white;
+}
+hr {
+    padding: 1px;
+    background-color:gray;
+}
+a:link {
+    color: gray;
+}
+a:visited {
+    color: dodgerblue;
+}
+a:hover {
+    color:rgb(231, 225, 225);
+}
+a:active {
+    color:blue;
+}

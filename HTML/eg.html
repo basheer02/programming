@@ -1,0 +1,102 @@
+<!-- <html>
+    <head>
+        <title> my web page </title>
+        <link rel="stylesheet" type="text/css" href="eg1.css">
+        <script src="eg2.js"></script>
+        <button onclick="revealmessage()">click down</button>
+        <div id="hiddenmessage" style="display: none;">
+        <p></p>
+            <button id="CountButton" onclick="countdown()">10</button>
+        </div>
+    </head>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Top Space with Logout Button</title>
+  <style>
+    /* CSS styles for the top space */
+    .top-space {
+      height: 50px;
+      background-color: #f2f2f2;
+      padding: 10px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-space">
+    <button onclick="logout()">Logout</button>
+  </div>
+  <!-- Rest of your HTML content -->
+</body>
+</html>
+
+<script>
+  // JavaScript function for logout
+  function logout() {
+    // Implement your logout logic here
+    // For example, redirect the user to the logout page
+    window.location.href = "logout.html";
+  }
+</script> -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Side Navigation Bar Example</title>
+  <style>
+    /* CSS styles for the side navigation bar */
+    #sidebar {
+  width: 250px;
+  float: left;
+  background-color: #ccc;
+  padding: 10px;
+}
+
+#sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar li {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+#sidebar li a {
+  color: #000;
+  text-decoration: none;
+}
+
+  </style>
+</head>
+<body>
+  <div id="sidebar">
+  <h2>side nav </h2>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+
+  
+  <script>
+    function showSidenav() {
+      document.querySelector("#sidenav").style.display = "block";
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+

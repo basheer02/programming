@@ -1,0 +1,27 @@
+                                      precision    recall  f1-score   support
+
+Africanized Honey Bees (Killer Bees)       1.00      1.00      1.00        86
+         Brown Marmorated Stink Bugs       0.99      1.00      0.99        74
+                     Cabbage Loopers       1.00      1.00      1.00        75
+                       Citrus Canker       1.00      1.00      1.00        84
+             Colorado Potato Beetles       1.00      1.00      1.00        79
+                         Corn Borers       1.00      1.00      1.00        82
+                       Corn Earworms       1.00      1.00      1.00        81
+                      Fall Armyworms       0.93      0.99      0.96        90
+                         Fruit Flies       1.00      1.00      1.00        84
+                        Spider Mites       1.00      1.00      1.00        75
+                          Stem Borer       1.00      1.00      1.00        81
+                              Thrips       1.00      1.00      1.00        86
+                    Tomato Hornworms       1.00      1.00      1.00        72
+              Western Corn Rootworms       1.00      1.00      1.00        84
+                              aphids       1.00      0.99      0.99        82
+                            armyworm       0.99      0.92      0.95        89
+                              beetle       1.00      1.00      1.00        74
+                            bollworm       1.00      1.00      1.00        87
+                         grasshopper       1.00      1.00      1.00        87
+                               mites       1.00      1.00      1.00        85
+                              sawfly       1.00      1.00      1.00        73
+
+                            accuracy                           0.99      1710
+                           macro avg       1.00      1.00      1.00      1710
+                        weighted avg       0.99      0.99      0.99      1710
